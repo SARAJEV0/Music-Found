@@ -1,5 +1,5 @@
 import requests
-import beautifulsoup4
+from beautifulsoup4 import *
 
 #запрос на получення даних (музики)
 link = 'https://soundcloud.com/'
