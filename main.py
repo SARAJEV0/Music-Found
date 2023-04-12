@@ -1,8 +1,5 @@
 import requests
-from beautifulsoup4 import *
+from bs4 import BeautifulSoup
 
-#запрос на получення даних (музики)
-link = 'https://soundcloud.com/'
-
-#отримаєш якійсь то там контент
-responce = requests.get(link).content
+url = 'https://z2.fm/'
+response = requests.get(url)
