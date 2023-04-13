@@ -1,23 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = 'https://z2.fm/'
-response = requests.get(url)
+r = requests.get("https://stopgame.ru/news")
+html = BS(r.content, 'html.parser')
 
-soup = BeautifulSoup(response.content, 'html.parser')
-
-title = soup.find('title').text
-paragraph = soup.find('p').text
-
-print('Title:', title)
-print('Paragraph:', paragraph)
-
-
-# import requests
-#import beautifulsoup4
-
-#запрос на получення даних (музики)
-#link = 'https://soundcloud.com/'
-
-#отримаєш якійсь то там контент
-#responce = requests.get(link).content
+for el in html.select(".")
